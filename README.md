@@ -1,2 +1,2 @@
-# Stock-Sentiment-Analysis-News-Headlines-Machine Learning
+# Stock Prediction -Sentiment-Analysis-News-Headlines-Machine Learning
 
