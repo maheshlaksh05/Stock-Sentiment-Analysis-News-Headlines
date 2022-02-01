@@ -24,14 +24,51 @@ Firstly, there is the n_estimators hyperparameter, which is just the number of t
 Another important hyperparameter is max_features, which is the maximum number of features random forest considers to split a node. Sklearn provides several options, all described in the documentation.
 
 The last important hyperparameter is min_sample_leaf. This determines the minimum number of leafs required to split an internal node.
+Naïve Bayes, which is computationally very efficient and easy to implement, is a learning algorithm frequently used in text classification problems. Two event models are commonly used: 
 
-2. Increasing the model's speed
+Multivariate Bernoulli Event Model
+Multivariate Event Model
+The Multivariate Event model is referred to as Multinomial Naive Bayes.
 
-The n_jobs hyperparameter tells the engine how many processors it is allowed to use. If it has a value of one, it can only use one processor. A value of “-1” means that there is no limit.
+When most people want to learn about Naive Bayes, they want to learn about the Multinomial Naive Bayes Classifier. However, there is another commonly used version of Naïve Bayes, called Gaussian Naive Bayes Classification.
 
-The random_state hyperparameter makes the model’s output replicable. The model will always produce the same results when it has a definite value of random_state and if it has been given the same hyperparameters and the same training data.
+Naive Bayes is based on Bayes’ theorem, where the adjective Naïve says that features in the dataset are mutually independent. Occurrence of one feature does not affect the probability of occurrence of the other feature. For small sample sizes, Naïve Bayes can outperform the most powerful alternatives. Being relatively robust, easy to implement, fast, and accurate, it is used in many different fields.
 
-Lastly, there is the oob_score (also called oob sampling), which is a random forest cross-validation method. In this sampling, about one-third of the data is not used to train the model and can be used to evaluate its performance. These samples are called the out-of-bag samples. It's very similar to the leave-one-out-cross-validation method, but almost no additional computational burden goes along with it.
+For Example, Spam filtering in email, Diagnosis of diseases, making decisions about treatment, Classification of RNA sequences in taxonomic studies, to name a few. However, we have to keep in mind about the type of data and the type of problem to be solved that dictates which classification model we want to choose. Strong violations of the independence assumptions and non-classification problems can lead to poor performance. In practice, it is recommended to use different classification models on the same dataset and then consider the performance, as well as computational efficiency.
 
-Find out who's hiring.
-See all Data + Analytics jobs at top tech companies & startups
+Also Read: Top Machine Learning Interview Questions
+
+To understand how Naïve Bayes works, first, we have to understand the concept of Bayes’ rule. This probability model was formulated by Thomas Bayes (1701-1761) and can be written as:
+
+
+
+where,
+PA= the prior probability of occurring A
+PBA= the condition probability of B given that A occurs
+PAB= the condition probability of A given that B occurs
+PB= the probability of occuring B
+
+The posterior probability, can be interpreted as: What is the revised probability of an event occurring after taking new information into consideration?
+
+It is a better reflection of the underlying truth of a data generating process because it includes more information.
+
+Conditional Probability
+The probability of one event A occurring when another event B with some relationship to A has already occurred is called conditional probability.
+
+
+This expression is valid only when P(A) is greater than zero.
+
+Prior Probability
+This probability can be defined as the prior knowledge or belief i.e. the probability of an event computed before the collection of new data. This probability is revised as new information becomes available to produce more accurate results.
+
+If the prior observations are used to calculate the probability, we call it prior probability.
+
+
+The Bag of Words Model
+Feature extraction and Selection are the most important sub-tasks in pattern classification. The three main criteria of good features are:
+
+Salient: The features should be meaningful and important to the problem
+Invariant: The features are resistant to scaling, distortion and orientation etc. 
+Discriminatory:  For training of classifiers, the features should have enough information to distinguish between patterns.
+Bag of words is a commonly used model in Natural Language Processing. The idea behind this model is the creation of vocabulary that contains the collection of different words, and each word is associated with a count of how it occurs. Later, the vocabulary is used to create d-dimensional feature vect
+
